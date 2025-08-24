@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.file-back {
+    clip-path: path("M 0,4 L 0,48 L 190,48 L 150,4 L 0,4 Z");
+}
