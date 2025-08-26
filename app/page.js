@@ -2,6 +2,7 @@
 import Project from "@/components/Project"
 import Skills from "@/components/Skills"
 import SocialContacts from "@/components/SocialContacts"
+import { Mail } from "lucide-react"
 
 const projects = [
   {
@@ -34,7 +35,7 @@ export default function Home() {
   return (
     <div>
       <header className="flex flex-col max-w-dvw min-[1000px]:px-64 min-[600px]:px-20 px-10 overflow-hidden">
-        <div className="w-full pt-14 pb-24 flex flex-col gap-5">
+        <div className="w-full pt-14 pb-16 flex flex-col gap-5">
           <div className="w-full flex flex-col">
             <h1 className="text-3xl font-bold">Amritpal Singh</h1>
             <h1 className="text-xl font-semibold -mt-2 text-[#6F6F6F]">Web Developer</h1>
@@ -51,13 +52,15 @@ export default function Home() {
         </div>
       </header>
 
+
+      <Skills />
+
       {/* main */}
       <main className="flex flex-col max-w-dvw bg-[#2C2C2C] py-10">
 
         <div className="flex flex-col gap-10 mb-20 relative">
-          <Skills />
-          <div className="-mt-24 flex-1 flex flex-col gap-3  min-[1000px]:px-64 min-[600px]:px-20 px-10">
-            <h2 className="pb-2 text-xl font-bold text-[#93B5FF]">Services</h2>
+          <div className="flex-1 flex flex-col gap-3  min-[1000px]:px-64 min-[600px]:px-20 px-10">
+            <h2 className="pb-2 text-2xl font-bold text-[#93B5FF]">Services</h2>
             <h2 className="pl-5 text-lg font-medium">
               Website Development
             </h2>
@@ -83,6 +86,26 @@ export default function Home() {
         </div>
 
       </main>
+
+
+      <section className="flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 not-sm:p-2 overflow-hidden py-10 pb-20">
+        <div className="lg:w-[50%] w-full flex flex-col justify-center items-center m-5">
+          <div className="flex flex-col py-2 pl-8">
+            <h1 className="text-6xl font-bold leading-20 max-[1200px]:leading-12 py-1 max-[1200px]:text-4xl">DON'T BE <br />A STRANGER</h1>
+            <h2 className="text-2xl max-[1200px]:text-xl">LETS CREATE SOMETHING MEANINGFULL</h2>
+          </div>
+          <div className="bg-white/10 h-[2px] w-full max-w-md" />
+          <h3 className="w-full max-w-md py-2 px-8 flex items-center"><Mail className="mr-3 h-5 w-5" /> amritpalonly13571@gmail.com</h3>
+        </div>
+        <div className="flex flex-1">
+          <div className="w-full mx-3 h-96 min-w-sm bg-black rounded-2xl"></div>
+        </div>
+      </section>
+
+      <footer className="w-full bg-[#202021] text-center py-5 border-t border-t-white/10 pb-20">
+        <p className="text-sm text-[#6F6F6F]">© 2024 Amritpal Singh. All rights reserved.</p>
+      </footer>
+
     </div>
   )
 }
