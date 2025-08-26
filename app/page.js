@@ -46,7 +46,7 @@ export default function Home() {
             <SocialContacts />
 
             <div className="flex-1">
-              Hi, I’m Amrit – a budding web developer passionate about crafting sleek, functional, and user-friendly digital experiences. Exploring the MERN stack and beyond, I love turning ideas into interactive reality.
+              Hi, I&apos;m Amrit – a budding web developer passionate about crafting sleek, functional, and user-friendly digital experiences. Exploring the MERN stack and beyond, I love turning ideas into interactive reality.
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function Home() {
       <section className="flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 not-sm:p-2 overflow-hidden py-10 pb-20">
         <div className="lg:w-[50%] w-full flex flex-col justify-center items-center m-5">
           <div className="flex flex-col py-2 pl-8">
-            <h1 className="text-6xl font-bold leading-20 max-[1200px]:leading-12 py-1 max-[1200px]:text-4xl">DON'T BE <br />A STRANGER</h1>
+            <h1 className="text-6xl font-bold leading-20 max-[1200px]:leading-12 py-1 max-[1200px]:text-4xl">DON&apos;T BE <br />A STRANGER</h1>
             <h2 className="text-2xl max-[1200px]:text-xl">LETS CREATE SOMETHING MEANINGFULL</h2>
           </div>
           <div className="bg-white/10 h-[2px] w-full max-w-md" />

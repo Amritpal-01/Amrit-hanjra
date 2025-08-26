@@ -35,7 +35,7 @@ const Skills = () => {
         mern.addEventListener("mouseleave", () => {
             setMernActive(false)
         })
-    }, []);
+    }, [MernActive]);
 
 
     useEffect(() => {
