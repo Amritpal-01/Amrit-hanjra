@@ -99,8 +99,8 @@ export default function Home() {
         </div>
         <div className="flex flex-1">
           <div className="w-full mx-3 not-md:w-[95dvw] bg-white/10 backdrop-blur-lg rounded-2xl px-6 py-10 flex flex-col gap-y-5">
-            <input className="bg-[#D9D9D9] w-full h-12 rounded-lg px-3 text-black" />
-            <textarea className="bg-[#D9D9D9] w-full h-48 rounded-lg p-3 text-black" />
+            <input placeholder="Email" className="bg-[#D9D9D9] w-full h-12 rounded-lg px-3 text-black" />
+            <textarea placeholder="Leave a message" className="bg-[#D9D9D9] w-full h-48 rounded-lg p-3 text-black" />
             <button className="bg-blue-300/10 py-2 rounded-lg text-blue-200 hover:bg-blue-400/10 cursor-pointer">Sent Message</button>
 
             <div className="flex-1 flex flex-row justify-center">
