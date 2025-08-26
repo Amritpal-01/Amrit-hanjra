@@ -177,13 +177,13 @@ const Skills = () => {
                 </div>
 
 
-                <div id='mern' className={`absolute transition-all duration-300 ${MernActive?  "-translate-y-16" : " not-sm:-translate-y-8"}`}>
-                    <div className="flex flex-col items-center text-center overflow-hidden relative">
-                        <div className="bg-[#171717] sm:w-80 w-72 h-12 file-back">
+                <div id='mern' className={`absolute transition-all duration-300 ${MernActive?  "-translate-y-16" : ""}`}>
+                    <div className="flex flex-col items-center text-center overflow-hidden not-sm:scale-75 relative">
+                        <div className="bg-[#171717] w-80 h-12 file-back">
                         </div>
                         <div id="file" className={`absolute w-64 h-48 up bg-[#B6B6B6] rounded-2xl mx-8 ${MernActive ? "" : "translate-y-5"} translate-x-4 transition-all duration-300`}></div>
                         <div id="file2" className={`absolute w-64 h-48 bg-white rounded-2xl mx-8 ${MernActive ? "translate-y-5" : "translate-y-7"} transition-all duration-300`}></div>
-                        <div className="sm:w-80 w-72 sm:h-48 h-44 bg-[#373737] rounded-b-2xl rounded-tr-2xl flex items-center justify-center relative">
+                        <div className="w-80 h-44 bg-[#373737] rounded-b-2xl rounded-tr-2xl flex items-center justify-center relative">
                             <NextjsIcon />
                             <Image
                                 className="absolute"

@@ -7,7 +7,7 @@ const Project = ({project}) => {
     return (
         <div className="xl:flex-1/2 w-full px-2 flex flex-col">
 
-            <div className="w-full p-2 bg-[#1f1f1f] border-b-0 border border-[#333333] rounded-t-xl">
+            <div className="w-full p-2 bg-blue-100/10 border-b-0 border border-[#333333] rounded-t-xl">
                 <div className="w-full aspect-[16/9] rounded-lg relative overflow-hidden">
                     <Image
                         fill
