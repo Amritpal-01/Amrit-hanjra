@@ -3,3 +3,39 @@
 .file-back {
     clip-path: path("M 0,4 L 0,48 L 190,48 L 150,4 L 0,4 Z");
 }
+
+
+#mern {
+    transform: rotateX(0deg) rotateY(360deg);
+    animation: autoRunRe 20s linear infinite;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-12deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-12deg) rotateY(360deg);
+    }
+}
+
+@keyframes autoRunRe {
+    from {
+        transform: rotateY(360deg) rotateX(12deg);
+    }
+
+    to {
+        transform: rotateY(0deg) rotateX(12deg);
+    }
+}
+
+#slider {
+    transform:  perspective(1000px);
+    animation: autoRun 20s linear infinite;
+}
+
+#item {
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+}
