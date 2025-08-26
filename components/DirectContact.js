@@ -1,16 +1,17 @@
+"use client"
 import React from 'react'
+import { motion } from "motion/react"
 
-const SocialContacts = () => {
+const DirectContact = () => {
     return (
-        <div className="flex flex-col pl-10 gap-5">
-            <div>
-                <h2 className="pb-3 text-lg font-bold text-blue-400/45">Contacts</h2>
-                <ul className="px-4">
-                    <li>amritpalonly13571@gmail.com</li>
-                    <li>+91 75892 09234</li>
-                </ul>
-            </div>
-            <div className="flex-1 flex flex-row items-end">
+        <div className="w-full mx-3 not-md:w-[95dvw] bg-white/10 text-white backdrop-blur-lg rounded-2xl px-6 py-10 flex flex-col gap-y-5 border border-blue-400/45">
+            <input placeholder="Email" className="bg-white/20 w-full h-12 rounded-lg px-3 focus:outline-[3px] outline-blue-400/50" />
+            <textarea placeholder="Leave a message" className="bg-white/10 w-full h-48 rounded-lg px-3 py-1 focus:outline-none" />
+            <motion.button
+            whileTap={{background :  "rgba(96, 165, 250, 0.2)", scale:0.95}}
+            className="bg-blue-300/10 py-2 rounded-lg text-blue-200 hover:bg-blue-400/20 cursor-pointer">Sent Message</motion.button>
+
+            <div className="flex-1 flex flex-row justify-center">
                 <div className="flex space-x-4">
                     {[
                         {
@@ -39,8 +40,9 @@ const SocialContacts = () => {
                     ))}
                 </div>
             </div>
+
         </div>
     )
 }
 
-export default SocialContacts
+export default DirectContact
