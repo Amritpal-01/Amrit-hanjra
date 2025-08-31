@@ -1,15 +1,33 @@
 "use client"
 import React from 'react'
 import { motion } from "motion/react"
+import { useForm } from 'react-hook-form'
+import { sendMessage } from '@/fetchReq/MessageHandler'
+import { useNotification } from '@/functions/Notifications/NotificationContext'
 
 const DirectContact = () => {
+    const {setNote} = useNotification();
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+    formState: { errors, isSubmitting },
+    } = useForm()
+
+    const onSubmit = async (data) => {
+        const res = await sendMessage(data);
+        setNote(res);
+        reset()
+    }
     return (
-        <div className="w-full mx-3 not-md:w-[95dvw] bg-white/10 text-white backdrop-blur-lg rounded-2xl px-6 py-10 flex flex-col gap-y-5 border border-blue-400/45">
-            <input placeholder="Email" className="bg-white/20 w-full h-12 rounded-lg px-3 focus:outline-[3px] outline-blue-400/50" />
-            <textarea placeholder="Leave a message" className="bg-white/10 w-full h-48 rounded-lg px-3 py-1 focus:outline-none" />
+        <form onSubmit={handleSubmit(onSubmit)} className="mx-4 sm:w-sm w-[350px] bg-white/10 text-white backdrop-blur-lg rounded-2xl px-6 py-10 flex flex-col gap-y-5 border border-blue-400/45">
+            <input placeholder="Name" {...register("name")} className="bg-white/20 w-full h-12 rounded-lg px-3 focus:outline-[3px] outline-blue-400/50" />
+            <textarea placeholder="Leave a message" {...register("message")} className="bg-white/10 w-full h-48 rounded-lg px-3 py-1 focus:outline-none" />
             <motion.button
-            whileTap={{background :  "rgba(96, 165, 250, 0.2)", scale:0.95}}
-            className="bg-blue-300/10 py-2 rounded-lg text-blue-200 hover:bg-blue-400/20 cursor-pointer">Sent Message</motion.button>
+                type='submit'
+                whileTap={{ background: "rgba(96, 165, 250, 0.2)", scale: 0.95 }}
+                className="bg-blue-300/10 h-10 rounded-lg text-blue-200 hover:bg-blue-400/20 flex justify-center items-center cursor-pointer">{isSubmitting ? <div id='spinner' className='w-7 h-7 border-4 border-t-blue-400/50 border-blue-400/30 rounded-full'></div> : "Sent Message"}</motion.button>
 
             <div className="flex-1 flex flex-row justify-center">
                 <div className="flex space-x-4">
@@ -41,7 +59,7 @@ const DirectContact = () => {
                 </div>
             </div>
 
-        </div>
+        </form>
     )
 }
 

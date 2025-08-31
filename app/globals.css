@@ -4,6 +4,19 @@
     clip-path: path("M 0,4 L 0,48 L 190,48 L 150,4 L 0,4 Z");
 }
 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#spinner {
+    animation: spin 1s linear infinite;
+}
 
 #mern {
     transform: rotateX(0deg) rotateY(360deg);

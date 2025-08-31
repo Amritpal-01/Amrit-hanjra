@@ -3,6 +3,7 @@ import DirectContact from "@/components/DirectContact"
 import Project from "@/components/Project"
 import Skills from "@/components/Skills"
 import SocialContacts from "@/components/SocialContacts"
+import Notify from "@/functions/Notifications/notify"
 import { Mail } from "lucide-react"
 
 const projects = [
@@ -35,6 +36,7 @@ export default function Home() {
 
   return (
     <div>
+      <Notify/>
       <header className="flex flex-col max-w-dvw min-[1000px]:px-64 min-[600px]:px-20 px-10 overflow-hidden">
         <div className="w-full pt-14 sm:pb-16 pb-0 flex flex-col gap-5">
           <div className="w-full flex flex-col sm:pb-4">
@@ -44,9 +46,11 @@ export default function Home() {
 
           <div className="flex xl:flex-row flex-col gap-10">
 
-            <SocialContacts />
+            <div className="not-sm:hidden ">
+              <SocialContacts />
+            </div>
 
-            <div className="flex-1">
+            <div className="flex-1 sm:text-white text-[#767676]">
               Hi, I&apos;m Amrit – a budding web developer passionate about crafting sleek, functional, and user-friendly digital experiences. Exploring the MERN stack and beyond, I love turning ideas into interactive reality.
             </div>
           </div>
@@ -55,6 +59,7 @@ export default function Home() {
 
 
       <Skills />
+      
 
       {/* main */}
       <main className="flex flex-col max-w-dvw bg-black/30 backdrop-blur-lg  py-10">
@@ -89,7 +94,7 @@ export default function Home() {
       </main>
 
 
-      <section className="flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 not-sm:p-2 overflow-hidden py-10 pb-20">
+      <section className="flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 sm:pt-10 overflow-hidden pb-10">
         <div className="lg:w-[50%] w-full flex flex-col justify-center items-center m-5">
           <div className="flex flex-col py-2 pl-8">
             <h1 className="text-6xl font-bold leading-20 max-[1200px]:leading-12 py-1 max-[1200px]:text-4xl text-blue-400/45">DON&apos;T BE <br />A STRANGER</h1>
@@ -98,7 +103,7 @@ export default function Home() {
           <div className="bg-white/10 h-[2px] w-full max-w-md" />
           <h3 className="w-full max-w-md py-2 px-8 flex items-center"><Mail className="mr-2 h-5 w-5 text-blue-400/45" /> amritpalonly13571@gmail.com</h3>
         </div>
-        <div className="flex flex-1">
+        <div className="flex flex-1 justify-center">
           <DirectContact/>
         </div>
       </section>
