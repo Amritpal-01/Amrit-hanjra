@@ -1,5 +1,6 @@
 import { Inter, Julius_Sans_One } from "next/font/google";
 import "./globals.css";
+import { NotificationProvider } from "@/functions/Notifications/NotificationContext";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} antialiased bg-[#777777] max-h-dvh overflow-auto`}
       >
-        {children}
+        <NotificationProvider>
+          {children}
+        </NotificationProvider>
       </body>
     </html>
   );

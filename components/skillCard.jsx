@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const SkillSection = ({ title, subtitle, description, skills, thumbnail }) => {
   return (
-    <div className='flex flex-col justify-center max-w-sm md:h-dvh julius gap-4 not-md:mx-auto'>
+    <div className='flex flex-col justify-center max-w-sm md:h-dvh julius gap-4 not-md:mx-auto -mt-full'>
       {/* image  */}
       <div className='w-full mx-auto aspect-[16/9] bg-gray-400 rounded-lg shadow-2xl shadow-[#aae4f6] mb-5 md:hidden translate-x-animation relative overflow-hidden'>
         <Image

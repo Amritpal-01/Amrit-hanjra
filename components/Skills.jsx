@@ -6,7 +6,7 @@ import SkillSection from '@/components/skillCard';
 
 const Skills = () => {
 
-    const sectionsData = [
+  const sectionsData = [
     {
       title: "Programming/",
       subtitle: "Frontend Frameworks",
@@ -59,12 +59,12 @@ const Skills = () => {
     let a = currentSkillScrollHeight;
     let i = 0;
 
-    while(true){
-      if(a > viewHeight / 2 && a < viewHeight){
+    while (true) {
+      if (a > viewHeight / 2 && a < viewHeight) {
         i++;
         break;
       }
-      if( a < viewHeight / 2){
+      if (a < viewHeight / 2) {
         break;
       }
 
@@ -106,29 +106,17 @@ const Skills = () => {
 
 
   return (
-    <div className='max-w-4xl w-full flex flex-col not-md:gap-20 p-4 mx-auto'>
+    <div className='max-w-4xl w-full flex flex-col not-md:gap-20 p-4 mx-auto relative'>
 
-          <div className='sticky top-0 right-0 w-full h-0 md:flex hidden'>
-            <div className='flex-1' />
-            <div className='flex-1 h-dvh flex items-center'>
-              <div className='w-full aspect-square bg-gray-400 shadow-2xl shadow-[#aae4f6] rounded-lg relative overflow-hidden'>
-                <Image
-                  src={sectionsData[currentSkill].thumbnail}
-                  alt="image"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+      <div className='sticky top-20 w-full md:flex hidden'>
+          <div className='w-full relative'>
+            <div className='w-full h-[1px] bg-gray-400'></div>
+            <h1 className='text-lg julius text-black'>Skills</h1>
           </div>
+        </div>
 
-          <div className='sticky top-20 w-full not-md:hidden'>
-            <div className='w-full relative'>
-              <div className='w-full h-[1px] bg-gray-400'></div>
-              <h1 className='text-lg julius text-black'>Skills</h1>
-            </div>
-          </div>
-
+      <div className='flex flex-row '>
+        <div className='flex-1 flex flex-col not-md:gap-y-14'>
           {sectionsData.map((section, index) => (
             <SkillSection
               key={index}
@@ -139,9 +127,26 @@ const Skills = () => {
               thumbnail={section.thumbnail}
             />
           ))}
-
-
         </div>
+
+        <div className='flex-1 md:flex hidden'>
+
+          <div className='sticky top-0 h-dvh w-full flex items-center'>
+            <div className='w-full aspect-square bg-gray-400 shadow-2xl shadow-[#aae4f6] rounded-lg relative overflow-hidden'>
+              <Image
+                src={sectionsData[currentSkill].thumbnail}
+                alt="image"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
 
 
   )
