@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
+const bulbUrl = "/bulbImage.png";
+
 const Header = () => {
   const image = useRef(null)
   const [pointer, setPointer] = useState({ x: 0, y: 0, midX: 0, midY: 0 });
@@ -57,7 +59,7 @@ const Header = () => {
             transform: `translate(${(pointer.x / pointer.midX) * 10}px, ${(pointer.y / pointer.midY) * 10 + 10}px)`,
           }}
           ref={image}
-          src="/bulbImage.png"
+          src={bulbUrl}
           alt="bulb"
           fill
           className="object-contain not-md:transition-all z-10 pointer-events-none"

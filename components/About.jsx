@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 
+const aboutImg1 = "/aboutImg1";
+const aboutImg2 = "/aboutImg2";
+const aboutImg3 = "/aboutImg3";
+
 const About = () => {
     return (
         <div className='max-w-4xl w-full h-vh md:h-dvh flex lg:flex-row flex-col md:px-4 px-8 not-md:pb-20 gap-6 '>
@@ -18,7 +22,7 @@ const About = () => {
             <div className='flex h-full flex-1 flex-row justify-center items-center gap-2'>
                 <div className='h-80 w-36 bg-gray-100 rounded-xl shadow-2xl relative overflow-hidden shadow-black/50 translate-y-animation'>
                     <Image
-                        src={"/AboutImg1.png"}
+                        src={aboutImg1.png}
                         alt='aboutImg'
                         fill
                         className='object-cover'
@@ -26,7 +30,7 @@ const About = () => {
                 </div>
                 <div className='h-80 w-36 bg-gray-100 rounded-xl shadow-2xl relative overflow-hidden shadow-black/50 -translate-y-animation '>
                     <Image
-                        src={"/AboutImg2.png"}
+                        src={aboutImg2.png}
                         alt='aboutImg'
                         fill
                         className='object-cover'
@@ -34,7 +38,7 @@ const About = () => {
                 </div>
                 <div className='h-80 w-36 bg-gray-100 rounded-xl shadow-2xl relative overflow-hidden shadow-black/50 translate-y-animation'>
                     <Image
-                        src={"/AboutImg3.png"}
+                        src={aboutImg3.png}
                         alt='aboutImg'
                         fill
                         className='object-cover'
