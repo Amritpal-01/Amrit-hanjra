@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-const aboutImg1 = "/aboutImg1";
-const aboutImg2 = "/aboutImg2";
-const aboutImg3 = "/aboutImg3";
+const aboutImg1 = "/aboutImg1.png";
+const aboutImg2 = "/aboutImg2.png";
+const aboutImg3 = "/aboutImg3.png";
 
 const About = () => {
     return (
@@ -22,7 +22,7 @@ const About = () => {
             <div className='flex h-full flex-1 flex-row justify-center items-center gap-2'>
                 <div className='h-80 w-36 bg-gray-100 rounded-xl shadow-2xl relative overflow-hidden shadow-black/50 translate-y-animation'>
                     <Image
-                        src={aboutImg1.png}
+                        src={aboutImg1}
                         alt='aboutImg'
                         fill
                         className='object-cover'
@@ -30,7 +30,7 @@ const About = () => {
                 </div>
                 <div className='h-80 w-36 bg-gray-100 rounded-xl shadow-2xl relative overflow-hidden shadow-black/50 -translate-y-animation '>
                     <Image
-                        src={aboutImg2.png}
+                        src={aboutImg2}
                         alt='aboutImg'
                         fill
                         className='object-cover'
@@ -38,7 +38,7 @@ const About = () => {
                 </div>
                 <div className='h-80 w-36 bg-gray-100 rounded-xl shadow-2xl relative overflow-hidden shadow-black/50 translate-y-animation'>
                     <Image
-                        src={aboutImg3.png}
+                        src={aboutImg3}
                         alt='aboutImg'
                         fill
                         className='object-cover'

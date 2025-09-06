@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-const bulbUrl = "/bulbImage.png";
+const bulbUrl = "/BulbImage.png";
 
 const Header = () => {
   const image = useRef(null)
