@@ -40,7 +40,7 @@ export default function Home() {
 
          <div className='max-w-4xl w-full px-4 pt-8 relative mx-auto'>
           <div className='w-full h-[1px] bg-gray-400'></div>
-          <h1 className='text-lg julius text-black'>About</h1>
+          <h1 className='text-lg julius text-black'>Contact</h1>
         </div>
 
         <section className=" flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 sm:pt-10 overflow-hidden pb-10 translate-x-animation">
