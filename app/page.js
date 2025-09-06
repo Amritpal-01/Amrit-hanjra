@@ -31,7 +31,7 @@ export default function Home() {
           <Skills />
         </div>
 
-        <div className='h-48'/>
+        <div className='h-48 '/>
 
         {/* projects */}
       </main>
