@@ -108,12 +108,19 @@ const Skills = () => {
   return (
     <div className='max-w-4xl w-full flex flex-col not-md:gap-20 p-4 mx-auto relative'>
 
-      <div className='sticky top-20 w-full md:flex hidden'>
-          <div className='w-full relative'>
-            <div className='w-full h-[1px] bg-gray-400'></div>
-            <h1 className='text-lg julius text-black'>Skills</h1>
-          </div>
+      <div className='w-full flex md:hidden'>
+        <div className='w-full relative'>
+          <div className='w-full h-[1px] bg-gray-400'></div>
+          <h1 className='text-lg julius text-black'>Skills</h1>
         </div>
+      </div>
+
+      <div className='sticky top-20 w-full md:flex hidden'>
+        <div className='w-full relative'>
+          <div className='w-full h-[1px] bg-gray-400'></div>
+          <h1 className='text-lg julius text-black'>Skills</h1>
+        </div>
+      </div>
 
       <div className='flex flex-row '>
         <div className='flex-1 flex flex-col not-md:gap-y-14'>
