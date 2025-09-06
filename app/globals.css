@@ -1,61 +1,119 @@
 @import "tailwindcss";
 
-.file-back {
-    clip-path: path("M 0,4 L 0,48 L 190,48 L 150,4 L 0,4 Z");
+.julius {
+  font-family: 'Julius Sans One', sans-serif;
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+.radial-bg-B5E2F0{
+  background: radial-gradient(
+    circle at 70% 40%,   /* shift gradient center to the right */
+    #B5E2F0 10%,
+    transparent 40%
+  );
 }
 
-#spinner {
-    animation: spin 1s linear infinite;
+@media (max-width: 1024px) {
+  .radial-bg-B5E2F0{
+    background: radial-gradient(
+    circle at 50% 70%,   
+    #B5E2F0 10%,
+    transparent 40%
+  );
+  }
 }
 
-#mern {
-    transform: rotateX(0deg) rotateY(360deg);
-    animation: autoRunRe 20s linear infinite;
+.text-stroke-black{
+  content : attr(data-content);
+  font-size : attr(data-size);
+  color: transparent;
+
 }
 
-@keyframes autoRun {
-    from {
-        transform: perspective(1000px) rotateX(-12deg) rotateY(0deg);
-    }
-
-    to {
-        transform: perspective(1000px) rotateX(-12deg) rotateY(360deg);
-    }
+/* Apply animation */
+.translate-y-animation {
+  animation-name: y-translate;
+  animation-timeline: view();
 }
 
-@keyframes autoRunRe {
-    from {
-        transform: rotateY(360deg) rotateX(12deg);
-    }
-
-    to {
-        transform: rotateY(0deg) rotateX(12deg);
-    }
+.translate-x-animation {
+  animation-name: x-translate;
+  animation-timeline: view();
 }
 
-#slider {
-    transform:  perspective(1000px);
-    animation: autoRun 20s linear infinite;
+.-translate-y-animation {
+  animation-name: -y-translate;
+  animation-timeline: view();
 }
 
-#item {
-    transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+@keyframes y-translate {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
 }
 
-@media (max-width: 640px) {
-    #item {
-    transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(200px);
+@keyframes x-translate {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  50%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
 }
+
+@keyframes -y-translate {
+  0% {
+    transform: translateY(140px);
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(60px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-260px);
+    opacity: 0;
+  }
+}
+
+.fade-in{
+  animation-name: fadeIn;
+  animation-timeline: view();
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    scale: 0;
+  }
+  15%{
+    opacity: 0;
+    scale: 0.30;
+  }
+  50%{
+    opacity: 1;
+    scale: 1;
+  }
+  100%{
+    opacity: 1;
+    scale: 1;
+  }
 }
