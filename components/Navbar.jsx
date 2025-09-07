@@ -14,7 +14,7 @@ const Navbar = () => {
             <ul className='lg:flex items-center gap-4 hidden'>
                 <a href='#about' className='text-md px-4 py-2 rounded-full hover:bg-gray-400/50 cursor-pointer transition-all duration-300'>About</a>
                 <a href="#skills" className='text-md px-4 py-2 rounded-full hover:bg-gray-400/50 cursor-pointer transition-all duration-300'>Skills</a>
-                <a className='text-md px-4 py-2 rounded-full hover:bg-gray-400/50 cursor-pointer transition-all duration-300'>Projects</a>
+                <a href='#projects' className='text-md px-4 py-2 rounded-full hover:bg-gray-400/50 cursor-pointer transition-all duration-300'>Projects</a>
                 <a href='#contact' className='text-md px-4 py-2 rounded-full hover:bg-gray-400/50 cursor-pointer transition-all duration-300'>Contact Us</a>
             </ul>
         </div>
