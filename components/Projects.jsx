@@ -24,7 +24,7 @@ const projects = [
 
 const Projects = () => {
     const sliderCont = useRef(null)
-    const [scrollPercentage, setScrollPercentage] = useState(0)
+    const [scrollPercentage, setScrollPercentage] = useState(0.01)
 
     useEffect(() => {
         document.addEventListener("scroll", () => {
@@ -37,7 +37,7 @@ const Projects = () => {
             const p = ((clientHeight - distanceFromTop) / height) * 100;
 
 
-            if (p >= 0 && p <= 120) {
+            if (p >= -20 && p <= 120) {
                 setScrollPercentage(p);
             }
 
