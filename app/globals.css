@@ -47,6 +47,11 @@
   animation-timeline: view();
 }
 
+.-translate-y-full-animation {
+  animation-name: -y-translate-full;
+  animation-timeline: view();
+}
+
 @keyframes y-translate {
   0% {
     transform: translateY(-200px);
@@ -61,6 +66,19 @@
   100% {
     transform: translateY(200px);
     opacity: 0;
+  }
+}
+
+@keyframes -y-translate-full {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -127,5 +145,20 @@
   100% {
     opacity: 1;
     scale: 1;
+  }
+}
+
+.width-transition{
+  width: 0;
+  animation-name: width-full;
+  animation-timeline: view();
+}
+
+@keyframes width-full {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
   }
 }

@@ -21,13 +21,13 @@ const DirectContact = () => {
         reset()
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className=" mx-4 sm:w-sm w-[350px] bg-[#B5E2F0] backdrop-blur-lg rounded-2xl px-6 py-10 flex flex-col gap-y-5 border border-blue-400/45">
+        <form onSubmit={handleSubmit(onSubmit)} className=" mx-4 sm:w-sm w-[350px] bg-blue-100 backdrop-blur-lg rounded-2xl px-6 py-10 flex flex-col gap-y-5 border border-black/10 shadow-xl shadow-blue-400/20">
             <input placeholder="Name" {...register("name")} className="bg-white/70 w-full h-12 rounded-lg px-3 focus:outline-[3px] outline-blue-400/50" />
             <textarea placeholder="Leave a message" {...register("message")} className="bg-white/40 w-full h-48 rounded-lg px-3 py-1 focus:outline-none" />
             <motion.button
                 type='submit'
                 whileTap={{ background: "rgba(96, 165, 250, 0.2)", scale: 0.95 }}
-                className="bg-black h-10 rounded-lg text-white hover:bg-black/60 flex justify-center items-center cursor-pointer">{isSubmitting ? <div id='spinner' className='w-7 h-7 border-4 border-t-blue-400/50 border-blue-400/30 rounded-full'></div> : "Sent Message"}</motion.button>
+                className="bg-black/80 h-10 rounded-lg text-white hover:bg-black/60 flex justify-center items-center cursor-pointer">{isSubmitting ? <div id='spinner' className='w-7 h-7 border-4 border-t-blue-400/50 border-blue-400/30 rounded-full'></div> : "Sent Message"}</motion.button>
 
             <div className="flex-1 flex flex-row justify-center">
                 <div className="flex space-x-4">
@@ -44,11 +44,11 @@ const DirectContact = () => {
                         <a
                             key={social.name}
                             href="#"
-                            className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/30 transform hover:scale-110 transition-all duration-300"
+                            className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/30 transform hover:scale-110 transition-all duration-300"
                             title={social.name}
                         >
                             <svg
-                                className="w-5 h-5 text-[#fff]"
+                                className="w-5 h-5 text-[#000]"
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
                             >

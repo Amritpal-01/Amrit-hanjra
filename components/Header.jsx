@@ -35,7 +35,7 @@ const Header = () => {
           </h1>
           <h1
             aria-hidden
-            className="absolute inset-0 z-20 lg:text-6xl md:text-5xl text-3xl font-bold text-white/10 [-webkit-text-stroke:0.7px_#E468F7] pointer-events-none"
+            className="absolute inset-0 z-20 lg:text-6xl md:text-5xl text-3xl font-bold text-white/10 [-webkit-text-stroke:0.5px_#E468F7] pointer-events-none"
           >
             Lets Create Something
           </h1>
@@ -48,7 +48,7 @@ const Header = () => {
           </h1>
           <h1
             aria-hidden
-            className="absolute inset-0 z-20 lg:text-9xl md:text-8xl text-6xl font-bold text-white/10 [-webkit-text-stroke:0.7px_#E468F7] pointer-events-none"
+            className="absolute inset-0 z-20 lg:text-9xl md:text-8xl text-6xl font-bold text-white/10 [-webkit-text-stroke:0.5px_#E468F7] pointer-events-none"
           >
             Unforgetable
           </h1>

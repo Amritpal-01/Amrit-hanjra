@@ -105,19 +105,28 @@ const Skills = () => {
   }, [])
 
 
+  useEffect(() => {
+    const imageScroll = document.querySelector("#imageScroll");
+    
+    imageScroll.scrollTo({
+      top : currentSkill * 416,
+      behavior : 'smooth'
+    })
+  },[currentSkill])
+
   return (
     <div className='max-w-4xl w-full flex flex-col not-md:gap-20 p-4 mx-auto relative'>
 
       <div className='w-full flex md:hidden'>
         <div className='w-full relative'>
-          <div className='w-full h-[1px] bg-gray-400'></div>
+          <div className='h-[1px] bg-gray-400 width-transition'></div>
           <h1 className='text-lg julius text-black'>Skills</h1>
         </div>
       </div>
 
       <div className='sticky top-20 w-full md:flex hidden'>
         <div className='w-full relative'>
-          <div className='w-full h-[1px] bg-gray-400'></div>
+          <div className='h-[1px] bg-gray-400 width-transition'></div>
           <h1 className='text-lg julius text-black'>Skills</h1>
         </div>
       </div>
@@ -138,14 +147,18 @@ const Skills = () => {
 
         <div className='flex-1 md:flex hidden'>
 
-          <div className='sticky top-0 h-dvh w-full flex items-center'>
-            <div className='w-full aspect-square bg-gray-400 shadow-2xl shadow-[#aae4f6] rounded-lg relative overflow-hidden'>
-              <Image
-                src={sectionsData[currentSkill].thumbnail}
-                alt="image"
-                fill
-                className="object-cover"
-              />
+          <div className='sticky top-0 h-dvh flex items-center '>
+            <div id="imageScroll"  data-height="416px" className='w-[416px] h-[416px] overflow-hidden'>
+              {sectionsData.map((section, idx) => (
+                <div key={idx} className='min-w-full min-h-full bg-gray-400 shadow-2xl shadow-[#aae4f6] rounded-lg relative overflow-hidden'>
+                  <Image
+                    src={section.thumbnail}
+                    alt="image"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
