@@ -149,7 +149,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div id='skillStart' className='flex flex-row '>
+      <div id='skillStart' className='flex flex-row not-md:-mt-20'>
 
         <div className='flex-1 flex flex-col relative'>
           {sectionsData.map((section, index) => (
