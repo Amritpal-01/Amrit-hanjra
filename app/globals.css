@@ -132,12 +132,7 @@
     scale: 0;
   }
 
-  15% {
-    opacity: 0;
-    scale: 0.30;
-  }
-
-  50% {
+  30% {
     opacity: 1;
     scale: 1;
   }

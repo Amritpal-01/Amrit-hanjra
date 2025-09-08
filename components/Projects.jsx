@@ -30,8 +30,8 @@ const Projects = () => {
         document.addEventListener("scroll", () => {
             if (!window) return;
 
-            const distanceFromTop = document.querySelector("#start").getBoundingClientRect().top + window.scrollY;
-            const height = document.querySelector("#start").offsetHeight;
+            const distanceFromTop = document.querySelector("#projectStart").getBoundingClientRect().top + window.scrollY;
+            const height = document.querySelector("#projectStart").offsetHeight;
             const clientHeight = window.scrollY;
 
             const p = ((clientHeight - distanceFromTop) / height) * 100;
@@ -46,7 +46,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <div id="start" ref={sliderCont} style={{ height: `${total * 100}dvh` }} className={`w-full relative`}>
+        <div id="projectStart" ref={sliderCont} style={{ height: `${total * 100}dvh` }} className={`w-full relative`}>
             <div className='sticky top-0 flex flex-col h-dvh w-full max-w-4xl mx-auto px-4 julius pt-10 overflow-hidden'>
                 <div className='w-full pt-8 relative'>
                     <div style={{ width: `${scrollPercentage + 10}%` }} className='h-[1px] bg-gray-400'></div>

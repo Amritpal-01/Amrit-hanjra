@@ -39,16 +39,17 @@ const Skills = () => {
 
   const [currentSkill, setCurrentSkill] = useState(0)
 
-  const handleSkillScroll = async (scrollY, viewHeight, skillSectionInit) => {
-    const currentSkillScrollHeight = scrollY - skillSectionInit;
+  const handleSkillScroll = async (scrollY, viewHeight, distanceFromTop) => {
+
+    const currentSkillScrollHeight = scrollY - distanceFromTop;
     const remainder = currentSkillScrollHeight % viewHeight;
 
     let scrollH;
 
-    if (remainder > viewHeight / 3) {
-      scrollH = skillSectionInit + currentSkillScrollHeight + viewHeight - remainder;
+    if (remainder > viewHeight / 2) {
+      scrollH = distanceFromTop + currentSkillScrollHeight + viewHeight - remainder;
     } else {
-      scrollH = skillSectionInit + currentSkillScrollHeight - remainder;
+      scrollH = distanceFromTop + currentSkillScrollHeight - remainder;
     }
 
     document.documentElement.scrollTo({
@@ -78,41 +79,58 @@ const Skills = () => {
   }
 
   useEffect(() => {
-    if (window.innerWidth <= 768) return;
-    let skillSectionInit = window.innerHeight * 2;
+    // const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    //  if(!isMobile){
+    let scrollTimeout;
 
-    if (!isMobile) {
-      let scrollTimeout;
+    document.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
 
-      document.addEventListener("scroll", () => {
-        clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const distanceFromTop = document.querySelector("#skillStart").getBoundingClientRect().top + window.scrollY;
+        const scrollY = window.scrollY;
+        const viewHeight = window.innerHeight;
 
-        scrollTimeout = setTimeout(() => {
-          const scrollY = window.scrollY;
-          const viewHeight = window.innerHeight;
+        if (
+          scrollY > distanceFromTop &&
+          scrollY < distanceFromTop + viewHeight * 3.5
+        ) {
+          handleSkillScroll(scrollY, viewHeight, distanceFromTop);
+        }
+      }, 50);
+    });
+    //  }
 
-          if (
-            scrollY > skillSectionInit &&
-            scrollY < skillSectionInit + viewHeight * 3.5
-          ) {
-            handleSkillScroll(scrollY, viewHeight, skillSectionInit);
-          }
-        }, 50);
-      });
-    }
+
+    // document.addEventListener("touchend", () => {
+    //   const scrollY = window.scrollY;
+    //   const viewHeight = window.innerHeight;
+
+    //   console.log("touchend")
+
+    //   if (
+    //     scrollY > distanceFromTop &&
+    //     scrollY < distanceFromTop + viewHeight * 3.5
+    //   ) {
+    //     handleSkillScroll(scrollY, viewHeight, distanceFromTop);
+    //   }
+
+    // });
+
   }, [])
 
 
   useEffect(() => {
-    const imageScroll = document.querySelector("#imageScroll");
-    
-    imageScroll.scrollTo({
-      top : currentSkill * 416,
-      behavior : 'smooth'
+    const imageScrolls = document.querySelectorAll("#imageScroll");
+
+    imageScrolls.forEach(imageScroll => {
+      imageScroll.scrollTo({
+        top: currentSkill * 416,
+        behavior: 'smooth'
+      })
     })
-  },[currentSkill])
+  }, [currentSkill])
 
   return (
     <div className='max-w-4xl w-full flex flex-col not-md:gap-20 p-4 mx-auto relative'>
@@ -131,8 +149,9 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className='flex flex-row '>
-        <div className='flex-1 flex flex-col not-md:gap-y-14'>
+      <div id='skillStart' className='flex flex-row '>
+
+        <div className='flex-1 flex flex-col relative'>
           {sectionsData.map((section, index) => (
             <SkillSection
               key={index}
@@ -144,11 +163,10 @@ const Skills = () => {
             />
           ))}
         </div>
-
+        {/* pc comp  */}
         <div className='flex-1 md:flex hidden'>
-
           <div className='sticky top-0 h-dvh flex items-center '>
-            <div id="imageScroll"  data-height="416px" className='w-[416px] h-[416px] overflow-hidden'>
+            <div id="imageScroll" data-height="416px" className='w-[416px] h-[416px] overflow-hidden'>
               {sectionsData.map((section, idx) => (
                 <div key={idx} className='min-w-full min-h-full bg-gray-400 shadow-2xl shadow-[#aae4f6] rounded-lg relative overflow-hidden'>
                   <Image
@@ -162,8 +180,6 @@ const Skills = () => {
             </div>
           </div>
         </div>
-
-
       </div>
 
     </div>
