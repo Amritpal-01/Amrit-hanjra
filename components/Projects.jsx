@@ -47,14 +47,14 @@ const Projects = () => {
 
     return (
         <div id="projectStart" ref={sliderCont} style={{ height: `${total * 100}dvh` }} className={`w-full relative`}>
-            <div className='sticky top-0 flex flex-col h-dvh w-full max-w-4xl mx-auto px-4 julius pt-10 overflow-hidden'>
+            <div className='sticky top-0 flex flex-col h-dvh w-full max-w-4xl mx-auto px-4  pt-10 overflow-hidden fade-in'>
                 <div className='w-full pt-8 relative'>
                     <div style={{ width: `${scrollPercentage + 10}%` }} className='h-[1px] bg-gray-400'></div>
                     <h1 className='text-lg julius text-black'>Projects</h1>
                 </div>
 
                 <div
-                    className='flex-1 px-4 gap-x-2 pb-20 flex items-center flex-row w-full overflow-visible'
+                    className='flex-1 px-4 gap-x-10 pb-20 flex items-center flex-row w-full overflow-visible'
                     style={{ transform: `translateX(-${scrollPercentage * total}%)` }}
                 >
 
@@ -68,7 +68,7 @@ const Projects = () => {
                                     className='object-cover'
                                 />
                             </div>
-                            <div className='lg:flex-1'>
+                            <div className='lg:flex-1 text-lg'>
                                 <p className='m-2'>
                                     {description}
                                 </p>

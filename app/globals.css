@@ -99,7 +99,7 @@
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateX(200px);
     opacity: 0;
   }
 }
@@ -137,9 +137,14 @@
     scale: 1;
   }
 
-  100% {
+  70%{
     opacity: 1;
     scale: 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 0;
   }
 }
 
