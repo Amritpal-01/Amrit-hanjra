@@ -5,12 +5,10 @@ import { Mail } from 'lucide-react'
 const Contact = () => {
   return (
     <div className='pt-10'>
-
-
-      <div className='max-w-4xl w-full px-4 pt-8 relative mx-auto'>
+      {/* <div className='max-w-4xl w-full px-4 pt-8 relative mx-auto'>
         <div className='h-[1px] bg-gray-400 width-transition'></div>
         <h1 className='text-lg julius text-black'>Contact</h1>
-      </div>
+      </div> */}
 
       <section className=" flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 sm:pt-10 overflow-hidden pb-10 -translate-y-full-animation">
 

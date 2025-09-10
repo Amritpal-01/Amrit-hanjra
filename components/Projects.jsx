@@ -46,8 +46,8 @@ const Projects = () => {
     }, [])
 
     return (
-        <div id="projectStart" ref={sliderCont} style={{ height: `${total * 100}dvh` }} className={`w-full relative`}>
-            <div className='sticky top-0 flex flex-col h-dvh w-full max-w-4xl mx-auto px-4  pt-10 overflow-hidden fade-in'>
+        <div id="projectStart" ref={sliderCont} style={{ height: `${(total - 1) * 100}dvh` }} className={`w-full relative`}>
+            <div className='sticky top-0 flex flex-col h-dvh w-full  mx-auto px-4  pt-10 overflow-hidden fade-in'>
                 <div className='w-full pt-8 relative'>
                     <div style={{ width: `${scrollPercentage + 10}%` }} className='h-[1px] bg-gray-400'></div>
                     <h1 className='text-lg julius text-black'>Projects</h1>
@@ -60,7 +60,7 @@ const Projects = () => {
 
                     {projects.map(({thumbnail, description, skills} , idx) => (
                         <div key={idx} className='min-w-full h-full flex not-lg:flex-col items-center'>
-                            <div className='lg:flex-1 not-lg:w-full h-72 m-2 rounded-md relative overflow-hidden'>
+                            <div className='lg:flex-1 not-lg:w-full aspect-[16/9] m-2 rounded-sm shadow-gray-400 shadow-2xl relative overflow-hidden'>
                                 <Image
                                     src={thumbnail}
                                     alt={"img"}
