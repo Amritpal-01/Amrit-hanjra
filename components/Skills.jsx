@@ -79,7 +79,11 @@ const Skills = () => {
   }
 
   useEffect(() => {
-    // const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    let delay = 50;
+
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(isMobile) delay = 200;
 
     //  if(!isMobile){
     let scrollTimeout;
@@ -98,7 +102,7 @@ const Skills = () => {
         ) {
           handleSkillScroll(scrollY, viewHeight, distanceFromTop);
         }
-      }, 50);
+      }, delay);
     });
     //  }
 
