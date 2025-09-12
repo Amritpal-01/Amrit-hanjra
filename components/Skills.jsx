@@ -83,7 +83,7 @@ const Skills = () => {
 
     const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    if(isMobile) delay = 200;
+    if(isMobile) delay = 100;
 
     //  if(!isMobile){
     let scrollTimeout;
