@@ -16,8 +16,8 @@ const Julius = Julius_Sans_One({
 
 
 export const metadata = {
-  title: "Portfolio",
-  description: "this is my portfolio",
+  title: "Amrit's protfolio",
+  description: "",
 };
 
 export default function RootLayout({ children }) {
