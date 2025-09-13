@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isMenuToggle, setIsMenuToggle] = useState()
 
   const handleClick = (str) => {
+    setIsMenuToggle(false)
     const distanceFromTop = document.querySelector("#" + str).getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: distanceFromTop,
@@ -44,7 +45,7 @@ const Navbar = () => {
 
 
         {/* mobile Menu */}
-        <div className={`w-full h-dvh bg-[#F0F9F9] absolute left-0 top-15 duration-300 transition-all ${isMenuToggle ? "" : "opacity-0 translate-x-full"}`}>
+        <div className={`w-full h-screen bg-[#F0F9F9] absolute left-0 top-15 duration-300 transition-all ${isMenuToggle ? "" : "opacity-0 translate-x-full"}`}>
           <div className='w-full flex flex-col **:transition-all'>
             {["home", "about", "skills", "projects", "contact"].map(str => (
 

@@ -58,7 +58,7 @@ export default function Home() {
 
       <div id='homeEnd' />
 
-      <main className='bg-[#f0f9f9] z-10 rounded-t-4xl lg:rounded-t-[60px] relative max-w-dvw mt-24'>
+      <main className='bg-[#f0f9f9] z-10 rounded-t-4xl lg:rounded-t-[60px] relative max-w-full mt-24'>
 
         <div ref={(el) => (sections.current[1] = el)} id="about" className='w-full flex justify-center radial-bg-B5E2F0 relative mb-10'>
           <About />
