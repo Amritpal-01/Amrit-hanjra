@@ -3,7 +3,6 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Header from '@/components/Header'
 import Navbar from '@/components/Navbar';
-import Projects from '@/components/Projects';
 import ProjectsQ from '@/components/ProjectsQ';
 import Skills from '@/components/Skills';
 import { useNavigation } from '@/contexts/NavigationContext';
@@ -39,7 +38,7 @@ export default function Home() {
     sections.current.forEach(section => {
       observer.observe(section)
     })
-  }, [sections])
+  }, [sections, setSelectionState])
 
   return (
     <div className='relative flex flex-col'>

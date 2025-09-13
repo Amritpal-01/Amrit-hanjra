@@ -6,19 +6,22 @@ const total = 3;
 
 const projects = [
     {
-        thumbnail : "/agcinfo.png",
-        description : "This is a simple to use platform where students can connect, Q/A and find study resources through our collections, build with",
-        skills : ["Node.js", "MongoDB", "Next.js", "Oauth"]
+        thumbnail: "/agcinfo.png",
+        description: "This is a simple to use platform where students can connect, Q/A and find study resources through our collections, build with",
+        skills: ["Node.js", "MongoDB", "Next.js", "Oauth"],
+        url: "https://agcinfo.vercel.app/"
     },
     {
-        thumbnail : "/connect.jpg",
-        description : "Its a one-on-one chat with well encrypted data and featurs like seen/unseen messages fully backed by sockets",
-        skills : ["Node.js", "MongoDB", "IndexedDB", "Socket.io" , "Next.js"]
+        thumbnail: "/connect.jpg",
+        description: "Its a one-on-one chat with well encrypted data and featurs like seen/unseen messages fully backed by sockets",
+        skills: ["Node.js", "MongoDB", "IndexedDB", "Socket.io", "Next.js"],
+        url: "https://connect-plum.vercel.app/"
     },
     {
-        thumbnail : "/blogspace.png",
-        description : "A Simple bigenner level blogging website along side strapi as CMS",
-        skills : ["Strapi", "Next.js", "IndexedDB"]
+        thumbnail: "/blogspace.png",
+        description: "A Simple bigenner level blogging website along side strapi as CMS",
+        skills: ["Strapi", "Next.js", "IndexedDB"],
+        url: "https://blogspace-amrs.vercel.app/"
     },
 ]
 
@@ -58,8 +61,8 @@ const Projects = () => {
                     style={{ transform: `translateX(-${scrollPercentage * total}%)` }}
                 >
 
-                    {projects.map(({thumbnail, description, skills} , idx) => (
-                        <div key={idx} className='min-w-full h-full flex not-lg:flex-col items-center'>
+                    {projects.map(({ thumbnail, description, skills }, idx) => (
+                        <div key={idx} className='min-w-full h-full flex not-lg:flex-col items-center relative'>
                             <div className='lg:flex-1 not-lg:w-full aspect-[16/9] m-2 rounded-sm shadow-gray-400 shadow-2xl relative overflow-hidden'>
                                 <Image
                                     src={thumbnail}
@@ -73,7 +76,7 @@ const Projects = () => {
                                     {description}
                                 </p>
                                 <ul style={{ listStyleImage: "url(/list-icon.png)" }} className='list-inside **:px-4 px-8'>
-                                    {skills.map((skill , index) => (
+                                    {skills.map((skill, index) => (
                                         <li key={index}>{skill}</li>
                                     ))}
                                 </ul>
