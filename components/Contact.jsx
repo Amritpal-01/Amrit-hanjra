@@ -10,7 +10,7 @@ const Contact = () => {
         <h1 className='text-lg julius text-black'>Contact</h1>
       </div> */}
 
-      <section className=" flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 sm:pt-10 overflow-hidden pb-10 -translate-y-full-animation">
+      <section className=" flex lg:flex-row flex-col items-center w-full min-[1300px]:px-52 px-10 sm:pt-10 overflow-hidden pb-10 -translate-y-full-animation fade-in">
 
         <div className=" lg:w-[50%] w-full flex flex-col justify-center items-center m-5">
 

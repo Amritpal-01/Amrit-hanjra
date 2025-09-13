@@ -26,7 +26,7 @@ const Header = () => {
       <div
         style={{
           transform: `translate(${(pointer.x / pointer.midX) * 10}px, ${(pointer.y / pointer.midY) * 10 + 10}px)`,
-        }} className="flex-1 mt-[25dvh] flex flex-col justify-center items-center w-full relative text-black/30 not-md:transition-all">
+        }} className="flex-1 mt-[25vh] flex flex-col justify-center items-center w-full relative text-black/30 not-md:transition-all">
 
         {/* Line 1 */}
         <div className="relative w-fit">

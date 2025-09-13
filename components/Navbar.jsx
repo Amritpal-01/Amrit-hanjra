@@ -22,7 +22,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`z-40 fixed top-0 left-0 w-dvw flex justify-center julius transition-all duration-300 ${isMenuToggle && "bg-[#f0f9f9]"}`}>
+    <nav className={`z-40 fixed top-0 left-0 w-full flex justify-center julius transition-all duration-300 ${isMenuToggle && "bg-[#f0f9f9]"}`}>
       <div className='max-w-7xl w-full p-4 flex justify-between items-center relative'>
         <div className='flex items-center gap-6'>
           <Logo />

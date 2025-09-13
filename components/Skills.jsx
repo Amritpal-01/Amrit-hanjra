@@ -169,7 +169,7 @@ const Skills = () => {
         </div>
         {/* pc comp  */}
         <div className='flex-1 md:flex hidden'>
-          <div className='sticky top-0 h-dvh flex items-center '>
+          <div className='sticky top-0 h-screen flex items-center '>
             <div id="imageScroll" data-height="416px" className='w-[416px] h-[416px] overflow-hidden'>
               {sectionsData.map((section, idx) => (
                 <div key={idx} className='min-w-full min-h-full bg-gray-400 shadow-2xl shadow-[#aae4f6] rounded-lg relative overflow-hidden'>

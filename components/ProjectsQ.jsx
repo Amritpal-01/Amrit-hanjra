@@ -42,8 +42,8 @@ const ProjectsQ = () => {
   }
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-20">
-      <div className="mb-16 text-center">
+    <section className="w-full max-w-6xl mx-auto p-4">
+      <div className="mb-16 text-center fade-in">
         <h2 className="text-4xl md:text-5xl font-bold julius text-black tracking-wide mb-2 drop-shadow-lg">
           Projects
         </h2>
@@ -59,7 +59,7 @@ const ProjectsQ = () => {
               group relative bg-white/80 shadow-2xl rounded-2xl overflow-hidden flex flex-col
               hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.25)]
               transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
-              cursor-pointer
+              cursor-pointer fade-in
             `}
             style={{ minHeight: 420 }}
             onMouseMove={e => handleMouseMove(e, idx)}

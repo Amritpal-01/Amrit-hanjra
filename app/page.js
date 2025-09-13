@@ -49,12 +49,12 @@ export default function Home() {
 
       <Navbar />
 
-      <div className='fixed top-0 left-0 z-0 w-full h-dvh overflow-hidden'>
+      <div className='fixed top-0 left-0 z-0 w-full h-screen overflow-hidden'>
         <Header />
       </div>
 
 
-      <div ref={(el) => (sections.current[0] = el)} id="home" className='h-dvh' />
+      <div ref={(el) => (sections.current[0] = el)} id="home" className='h-screen' />
 
       <div id='homeEnd' />
 

@@ -7,7 +7,7 @@ const aboutImg3 = "/aboutImg3.png";
 
 const About = () => {
     return (
-        <div className='max-w-4xl w-full h-vh md:h-dvh flex lg:flex-row flex-col md:px-4 px-8 not-md:pb-20 gap-6 '>
+        <div className='max-w-4xl w-full h-screen flex lg:flex-row flex-col md:px-4 px-8 not-md:pb-20 gap-6 '>
 
 
             {/* text */}
