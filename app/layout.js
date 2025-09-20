@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased bg-[#777777] h-dvh overflow-auto`}
+        className={`${inter.variable} antialiased bg-[#777777] h-screen overflow-auto`}
       >
         <NotificationProvider>
           <NavigationProvider>

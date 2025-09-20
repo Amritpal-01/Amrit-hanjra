@@ -80,18 +80,17 @@ const Skills = () => {
 
   useEffect(() => {
     let delay = 50;
-    let isUserInteracting = false;
 
-    // const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(isMobile) return;
 
     let scrollTimeout;
 
     document.addEventListener("scroll", () => {
-      if (isUserInteracting) return;
       clearTimeout(scrollTimeout);
 
       scrollTimeout = setTimeout(() => {
-        if (isUserInteracting) return;
         const distanceFromTop = document.querySelector("#skillStart").getBoundingClientRect().top + window.scrollY;
         const scrollY = window.scrollY;
         const viewHeight = window.innerHeight;
@@ -105,13 +104,6 @@ const Skills = () => {
       }, delay);
     });
 
-    document.addEventListener("touchstart", () => {
-      isUserInteracting = true;
-    })
-
-    document.addEventListener("touchend", () => {
-      isUserInteracting = false;
-    })
   }, [])
 
 
